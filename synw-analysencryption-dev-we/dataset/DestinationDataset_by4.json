@@ -1,0 +1,21 @@
+{
+	"name": "DestinationDataset_by4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "staencryptiondevwedfs",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "output.json",
+				"folderPath": "destination",
+				"fileSystem": "datalake"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

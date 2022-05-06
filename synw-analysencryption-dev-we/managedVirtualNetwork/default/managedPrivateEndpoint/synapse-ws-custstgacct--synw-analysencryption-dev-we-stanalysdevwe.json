@@ -1,0 +1,7 @@
+{
+	"name": "synapse-ws-custstgacct--synw-analysencryption-dev-we-stanalysdevwe",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysplattformen-we/providers/Microsoft.Storage/storageAccounts/stanalysdevwe",
+		"groupId": "dfs"
+	}
+}

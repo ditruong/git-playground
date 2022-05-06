@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sqlOnDemand--synw-analysencryption-dev-we",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Synapse/workspaces/synw-analysencryption-dev-we",
+		"groupId": "sqlOnDemand",
+		"fqdns": [
+			"synw-analysencryption-dev-we-ondemand.11496716-a732-4df3-8229-b4cc98cfe631.sql.azuresynapse.net"
+		]
+	}
+}
