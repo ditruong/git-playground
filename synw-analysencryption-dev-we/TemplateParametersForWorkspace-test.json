@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "synw-analysencryption-test-we"
+		},
+		"staencryptiondevwedfs_accountKey": {
+			"value": ""
+		},
+		"synw-analysencryption-dev-we-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"staencryptiondevwedfs_properties_typeProperties_url": {
+			"value": "https://staencryptiondevwe.dfs.core.windows.net"
+		},
+		"synw-analysencryption-dev-we-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://staencryptiondevwe.dfs.core.windows.net"
+		}
+	}
+}
