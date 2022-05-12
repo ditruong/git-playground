@@ -19,6 +19,12 @@
 			"type": "string",
 			"defaultValue": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Storage/storageAccounts/staencryptiondevwe"
 		},
+		"pep-eval-encryption_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"staencryptiondevwe.dfs.core.windows.net"
+			]
+		},
 		"synapse-ws-custstgacct--synw-analysencryption-dev-we-stanalysdevwe_properties_privateLinkResourceId": {
 			"type": "string",
 			"defaultValue": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysplattformen-we/providers/Microsoft.Storage/storageAccounts/stanalysdevwe"
@@ -27,9 +33,21 @@
 			"type": "string",
 			"defaultValue": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Synapse/workspaces/synw-analysencryption-dev-we"
 		},
+		"synapse-ws-sql--synw-analysencryption-dev-we_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"synw-analysencryption-dev-we.11496716-a732-4df3-8229-b4cc98cfe631.sql.azuresynapse.net"
+			]
+		},
 		"synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_properties_privateLinkResourceId": {
 			"type": "string",
 			"defaultValue": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Synapse/workspaces/synw-analysencryption-dev-we"
+		},
+		"synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"synw-analysencryption-dev-we-ondemand.11496716-a732-4df3-8229-b4cc98cfe631.sql.azuresynapse.net"
+			]
 		}
 	},
 	"variables": {
@@ -320,9 +338,7 @@
 			"properties": {
 				"privateLinkResourceId": "[parameters('pep-eval-encryption_properties_privateLinkResourceId')]",
 				"groupId": "dfs",
-				"fqdns": [
-					"staencryptiondevwe.dfs.core.windows.net"
-				]
+				"fqdns": "[parameters('pep-eval-encryption_properties_fqdns')]"
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
@@ -347,9 +363,7 @@
 			"properties": {
 				"privateLinkResourceId": "[parameters('synapse-ws-sql--synw-analysencryption-dev-we_properties_privateLinkResourceId')]",
 				"groupId": "sql",
-				"fqdns": [
-					"synw-analysencryption-dev-we.11496716-a732-4df3-8229-b4cc98cfe631.sql.azuresynapse.net"
-				]
+				"fqdns": "[parameters('synapse-ws-sql--synw-analysencryption-dev-we_properties_fqdns')]"
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
@@ -362,9 +376,7 @@
 			"properties": {
 				"privateLinkResourceId": "[parameters('synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_properties_privateLinkResourceId')]",
 				"groupId": "sqlOnDemand",
-				"fqdns": [
-					"synw-analysencryption-dev-we-ondemand.11496716-a732-4df3-8229-b4cc98cfe631.sql.azuresynapse.net"
-				]
+				"fqdns": "[parameters('synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_properties_fqdns')]"
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
