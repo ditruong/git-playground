@@ -11,11 +11,32 @@
 		"synw-analysencryption-dev-we-WorkspaceDefaultSqlServer_connectionString": {
 			"value": ""
 		},
-		"staencryptiondevwedfs_properties_typeProperties_url": {
-			"value": "https://staencryptiondevwe.dfs.core.windows.net"
+		"pep-eval-encryption_pep-eval-encryption_properties_privateLinkResourceId": {
+			"value": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Storage/storageAccounts/staencryptiondevwe"
 		},
-		"synw-analysencryption-dev-we-WorkspaceDefaultStorage_properties_typeProperties_url": {
-			"value": "https://stanalysdevwe.dfs.core.windows.net"
+		"pep-eval-encryption_pep-eval-encryption_properties_fqdns": {
+			"value": [
+				"staencryptiondevwe.dfs.core.windows.net"
+			]
+		},
+		"synapse-ws-custstgacct--synw-analysencryption-dev-we-stanalysdevwe_pep-eval-encryption_properties_privateLinkResourceId": {
+			"value": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysplattformen-we/providers/Microsoft.Storage/storageAccounts/stanalysdevwe"
+		},
+		"synapse-ws-sql--synw-analysencryption-dev-we_pep-eval-encryption_properties_privateLinkResourceId": {
+			"value": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Synapse/workspaces/synw-analysencryption-dev-we"
+		},
+		"synapse-ws-sql--synw-analysencryption-dev-we_pep-eval-encryption_properties_fqdns": {
+			"value": [
+				"synw-analysencryption-dev-we.11496716-a732-4df3-8229-b4cc98cfe631.sql.azuresynapse.net"
+			]
+		},
+		"synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_pep-eval-encryption_properties_privateLinkResourceId": {
+			"value": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Synapse/workspaces/synw-analysencryption-dev-we"
+		},
+		"synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_pep-eval-encryption_properties_fqdns": {
+			"value": [
+				"synw-analysencryption-dev-we-ondemand.11496716-a732-4df3-8229-b4cc98cfe631.sql.azuresynapse.net"
+			]
 		}
 	}
 }
