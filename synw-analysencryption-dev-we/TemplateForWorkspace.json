@@ -323,9 +323,9 @@
 			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
-				"privateLinkResourceId": "[parameters('pep-eval-encryption_privateLinkResourceId')]",
+				"privateLinkResourceId": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Storage/storageAccounts/staencryptiontestwe",
 				"groupId": "dfs",
-				"fqdns": "[parameters('pep-eval-encryption_fqdns')]"
+				"fqdns": "staencryptiontestwe.dfs.core.windows.net"
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
