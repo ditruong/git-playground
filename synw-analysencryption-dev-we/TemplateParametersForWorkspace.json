@@ -11,26 +11,11 @@
 		"synw-analysencryption-dev-we-WorkspaceDefaultSqlServer_connectionString": {
 			"value": ""
 		},
-		"pep-eval-encryption_properties_pep-eval-encryption_properties_privateLinkResourceId": {
-			"value": ""
+		"staencryptiondevwedfs_properties_typeProperties_url": {
+			"value": "https://staencryptiondevwe.dfs.core.windows.net"
 		},
-		"pep-eval-encryption_properties_pep-eval-encryption_properties_fqdns": {
-			"value": ""
-		},
-		"synapse-ws-custstgacct--synw-analysencryption-dev-we-stanalysdevwe_properties_pep-eval-encryption_properties_privateLinkResourceId": {
-			"value": ""
-		},
-		"synapse-ws-sql--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_privateLinkResourceId": {
-			"value": ""
-		},
-		"synapse-ws-sql--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_fqdns": {
-			"value": ""
-		},
-		"synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_privateLinkResourceId": {
-			"value": ""
-		},
-		"synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_fqdns": {
-			"value": ""
+		"synw-analysencryption-dev-we-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://stanalysdevwe.dfs.core.windows.net"
 		}
 	}
 }

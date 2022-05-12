@@ -15,26 +15,13 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'synw-analysencryption-dev-we-WorkspaceDefaultSqlServer'"
 		},
-		"pep-eval-encryption_properties_pep-eval-encryption_properties_privateLinkResourceId": {
-			"type": ""
+		"staencryptiondevwedfs_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://staencryptiondevwe.dfs.core.windows.net"
 		},
-		"pep-eval-encryption_properties_pep-eval-encryption_properties_fqdns": {
-			"type": ""
-		},
-		"synapse-ws-custstgacct--synw-analysencryption-dev-we-stanalysdevwe_properties_pep-eval-encryption_properties_privateLinkResourceId": {
-			"type": ""
-		},
-		"synapse-ws-sql--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_privateLinkResourceId": {
-			"type": ""
-		},
-		"synapse-ws-sql--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_fqdns": {
-			"type": ""
-		},
-		"synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_privateLinkResourceId": {
-			"type": ""
-		},
-		"synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_fqdns": {
-			"type": ""
+		"synw-analysencryption-dev-we-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://stanalysdevwe.dfs.core.windows.net"
 		}
 	},
 	"variables": {
@@ -215,7 +202,7 @@
 				"annotations": [],
 				"type": "AzureBlobFS",
 				"typeProperties": {
-					"url": "https://staencryptiondevwe.dfs.core.windows.net",
+					"url": "[parameters('staencryptiondevwedfs_properties_typeProperties_url')]",
 					"accountKey": {
 						"type": "SecureString",
 						"value": "[parameters('staencryptiondevwedfs_accountKey')]"
@@ -243,10 +230,7 @@
 				"annotations": [],
 				"type": "AzureSqlDW",
 				"typeProperties": {
-					"connectionString": {
-						"type": "SecureString",
-						"value": "[parameters('synw-analysencryption-dev-we-WorkspaceDefaultSqlServer_connectionString')]"
-					}
+					"connectionString": "[parameters('synw-analysencryption-dev-we-WorkspaceDefaultSqlServer_connectionString')]"
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
@@ -265,7 +249,7 @@
 				"annotations": [],
 				"type": "AzureBlobFS",
 				"typeProperties": {
-					"url": "https://stanalysdevwe.dfs.core.windows.net"
+					"url": "[parameters('synw-analysencryption-dev-we-WorkspaceDefaultStorage_properties_typeProperties_url')]"
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
@@ -323,9 +307,11 @@
 			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
-				"privateLinkResourceId": "[parameters('pep-eval-encryption_properties_pep-eval-encryption_properties_privateLinkResourceId')]",
+				"privateLinkResourceId": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Storage/storageAccounts/staencryptiondevwe",
 				"groupId": "dfs",
-				"fqdns": "[parameters('pep-eval-encryption_properties_pep-eval-encryption_properties_fqdns')]"
+				"fqdns": [
+					"staencryptiondevwe.dfs.core.windows.net"
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
@@ -336,7 +322,7 @@
 			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
-				"privateLinkResourceId": "[parameters('synapse-ws-custstgacct--synw-analysencryption-dev-we-stanalysdevwe_properties_pep-eval-encryption_properties_privateLinkResourceId')]",
+				"privateLinkResourceId": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysplattformen-we/providers/Microsoft.Storage/storageAccounts/stanalysdevwe",
 				"groupId": "dfs"
 			},
 			"dependsOn": [
@@ -348,9 +334,11 @@
 			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
-				"privateLinkResourceId": "[parameters('synapse-ws-sql--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_privateLinkResourceId')]",
+				"privateLinkResourceId": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Synapse/workspaces/synw-analysencryption-dev-we",
 				"groupId": "sql",
-				"fqdns": "[parameters('synapse-ws-sql--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_fqdns')]"
+				"fqdns": [
+					"synw-analysencryption-dev-we.11496716-a732-4df3-8229-b4cc98cfe631.sql.azuresynapse.net"
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
@@ -361,9 +349,11 @@
 			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
-				"privateLinkResourceId": "[parameters('synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_privateLinkResourceId')]",
+				"privateLinkResourceId": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Synapse/workspaces/synw-analysencryption-dev-we",
 				"groupId": "sqlOnDemand",
-				"fqdns": "[parameters('synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_properties_pep-eval-encryption_properties_fqdns')]"
+				"fqdns": [
+					"synw-analysencryption-dev-we-ondemand.11496716-a732-4df3-8229-b4cc98cfe631.sql.azuresynapse.net"
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
