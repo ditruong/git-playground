@@ -1,8 +1,8 @@
 {
     "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints": {
       "properties": {
-        "privateLinkResourceId": "=:-pep-eval-encryption_properties_privateLinkResourceId:",
-        "fqdns": "=:-pep-eval-encryption_properties_fqdns:"
+        "privateLinkResourceId": "-:-privateLinkResourceId:",
+        "fqdns": "-:-fqdns:"
       }
     }
 }
