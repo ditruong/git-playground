@@ -1,7 +1,8 @@
 {
     "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints": {
       "properties": {
-        "privateLinkResourceId": "="
+        "privateLinkResourceId": "=",
+        "fqdns": "="
       }
     }
 }
