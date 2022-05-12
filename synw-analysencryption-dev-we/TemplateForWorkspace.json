@@ -16,25 +16,25 @@
 			"metadata": "Secure string for 'connectionString' of 'synw-analysencryption-dev-we-WorkspaceDefaultSqlServer'"
 		},
 		"pep-eval-encryption_privateLinkResourceId": {
-			"type": ""
+			"type": "string"
 		},
 		"pep-eval-encryption_fqdns": {
-			"type": ""
+			"type": "array"
 		},
 		"synapse-ws-custstgacct--synw-analysencryption-dev-we-stanalysdevwe_privateLinkResourceId": {
-			"type": ""
+			"type": "string"
 		},
 		"synapse-ws-sql--synw-analysencryption-dev-we_privateLinkResourceId": {
-			"type": ""
+			"type": "string"
 		},
 		"synapse-ws-sql--synw-analysencryption-dev-we_fqdns": {
-			"type": ""
+			"type": "array"
 		},
 		"synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_privateLinkResourceId": {
-			"type": ""
+			"type": "string"
 		},
 		"synapse-ws-sqlOnDemand--synw-analysencryption-dev-we_fqdns": {
-			"type": ""
+			"type": "array"
 		}
 	},
 	"variables": {
