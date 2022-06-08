@@ -1,0 +1,7 @@
+{
+	"name": "pep-staencryptiondevwe",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/8e0dd2b1-4d99-4573-bc61-48f594059683/resourceGroups/rg-dev-analysencryption-we/providers/Microsoft.Storage/storageAccounts/staencryptiondevwe",
+		"groupId": "dfs"
+	}
+}
