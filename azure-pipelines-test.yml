@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+    - workspace_publish
+  paths:
+    include:
+    - synw-analysencryption-dev-we
+# no PR triggers
+pr: none
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: synapse'
+  inputs:
+    PathtoPublish: 'synw-analysencryption-dev-we'
+    ArtifactName: synapse
