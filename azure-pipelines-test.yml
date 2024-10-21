@@ -6,7 +6,7 @@
 trigger:
   branches:
     include:
-    - workspace_publish
+    - main
   paths:
     include:
     - README.md
