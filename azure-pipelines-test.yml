@@ -17,8 +17,5 @@ pool:
   vmImage: windows-latest
 
 steps:
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: synapse'
-  inputs:
-    PathtoPublish: 'synw-analysencryption-dev-we'
-    ArtifactName: synapse
+- bash: 
+  displayName: 'Bash Script'
