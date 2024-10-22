@@ -5,3 +5,9 @@ F1 - first adjustment
 F2 - second adjustment
 
 F5 - DEV 2 ADJUSTMENT
+
+F6
+
+F7
+
+F8

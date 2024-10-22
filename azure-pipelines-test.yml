@@ -9,7 +9,7 @@ trigger:
     - test
   paths:
     include:
-      - '*'
+      - README-dev1.md
 # no PR triggers
 pr: none
 
