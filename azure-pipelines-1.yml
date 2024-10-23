@@ -7,6 +7,9 @@ trigger:
   branches:
     include:
       - test
+  paths:
+    include:
+      - README.md
 pr:none
 
 pool:
